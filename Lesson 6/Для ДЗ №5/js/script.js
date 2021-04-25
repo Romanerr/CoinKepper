@@ -24,5 +24,5 @@ butttton.classList.add('menu-item')
 butttton.textContent = 'Пятый пункт'
 button[3].parentNode.appendChild(butttton, button[3]);
 
-info.textContent = prompt('Отношение к Apple?');
+info.textContent = prompt ('Отношение к Apple?');
 
