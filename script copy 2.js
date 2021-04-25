@@ -73,7 +73,7 @@ function start() {
             masive.push(appData.income[n])
            
        });
-       alert(masive)
+       alert(n + masive);
             } else alert("Error");
         },
     
