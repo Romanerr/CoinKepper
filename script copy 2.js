@@ -1,13 +1,44 @@
+let button = document.getElementById('start') ,
+
+    budgetValue = document.getElementsByClassName('budget-value'),
+    daybudgetValue = document.getElementsByClassName('daybudget-value'),
+    levelValue = document.getElementsByClassName('level-value'),
+    expensesValue = document.getElementsByClassName('expenses-value'),
+    optionalexpensesValue = document.getElementsByClassName('optionalexpenses-value'),
+    incomeValue = document.getElementsByClassName('income-value'),
+    monthSavingsValue = document.getElementsByClassName('monthsavings-value'),
+    yearSavingsValue = document.getElementsByClassName('yearsavings-value'),
+    
+    
+    expensesitem = document.getElementsByClassName('expenses-item') ,
+    buttonYes =document.getElementsByTagName('button')[0] ,
+    buttonYes1 =document.getElementsByTagName('button')[1] ,
+    buttonCount = document.getElementsByTagName('button')[2] ,
+    
+    optinalexpenses = document.querySelectorAll('.optionalexpenses-item') ,
+    
+    income = document.querySelector('.choose-income') ,
+    checkbox = document.querySelector('#savings') ,
+    summ = document.querySelector('.choose-sum') ,
+    percent = document.querySelector('.choose-percent') ,
+    year = document.querySelector('.year-value') ,
+    mounth = document.querySelector('.month-value') ,
+    day = document.querySelector('.day-value');
+
 let money,time;
 
-function start() {
+
+button.addEventListener('click',function(){
     money = +prompt("Ваш бюджет на месяц?",""),
     time = +prompt("Введите дату в формате YYYY-MM-DD","");
     while(isNaN(money) || money == "" || money == null){
         money = +prompt("Ваш бюджет на месяц?","");   
     }
+    appData.budget = money;
+    appData.timeData = time;
+    budgetValue.textContent = money.toFixed();
+});
 
-}
     let appData = {
     budget: money,
     timeData: time,
